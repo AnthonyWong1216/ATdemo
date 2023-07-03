@@ -10,7 +10,7 @@
  
 - name: Install PHP Extensions
   yum: 
-    name: {{ item }}
+    name: "{{ item }}"
     update_cache: yes
     state: latest
   loop: "{{ php_modules }}"
