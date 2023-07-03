@@ -8,6 +8,8 @@
         name: httpd
         enabled: true
         state: stopped
+    - name: Change default gateway
+      shell: "ip route add default via 192.168.64.1 dev enp0s2"
     - name: httpd uninstalled
       ansible.builtin.yum:
         name: httpd
