@@ -8,6 +8,6 @@ mysql_user: "wpuser"
 mysql_password: "password"
  
 #HTTP Settings
-http_host: "wp.test.ibm.com"
-http_conf: "wp.test.ibm.com.conf"
+http_host: "wptest"
+http_conf: "wptest.conf"
 http_port: "80"
