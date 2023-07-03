@@ -1,0 +1,14 @@
+---
+- name: Remove webserver
+  hosts: all
+  become: true
+  tasks:
+    - name: httpd service stop
+      ansible.builtin.service:
+        name: httpd
+        enabled: true
+        state: stopped
+    - name: httpd uninstalled
+      ansible.builtin.yum:
+        name: httpd
+        state: absent
