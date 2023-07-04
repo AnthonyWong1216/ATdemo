@@ -6,7 +6,7 @@
     - name: httpd and mysql service stop
       ansible.builtin.service:
         name: "{{ item }}"
-        enabled: true
+        enabled: false
         state: stopped
       loop: [ 'httpd', 'mysqld' ]
     - name: httpd and mysql uninstalled
