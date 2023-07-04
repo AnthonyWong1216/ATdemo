@@ -1,5 +1,10 @@
 # WordPress Configuration
  
+    - name: Install gzip 
+      yum:
+        name: gzip
+        state: present
+    
     - name: Download and unpack latest WordPress
       unarchive:
         src: https://wordpress.org/latest.tar.gz
