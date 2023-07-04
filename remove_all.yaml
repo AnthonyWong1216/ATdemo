@@ -13,4 +13,4 @@
       ansible.builtin.yum:
         name: "{{ item }}"
         state: absent
-      loop: [ 'httpd', 'mysqld' ]
+      loop: [ 'httpd', 'mysql-server', 'php-mysqlnd', 'python3-PyMySQL' ]
