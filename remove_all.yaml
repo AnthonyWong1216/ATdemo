@@ -1,0 +1,16 @@
+---
+- name: Remove all service
+  hosts: all
+  become: true
+  tasks:
+    - name: httpd and mysql service stop
+      ansible.builtin.service:
+        name: "{{ item }}"
+        enabled: true
+        state: stopped
+      loop: [ 'httpd', 'mysqld' ]
+    - name: httpd and mysql uninstalled
+      ansible.builtin.yum:
+        name: "{{ item }}"
+        state: absent
+      loop: [ 'httpd', 'mysqld' ]
