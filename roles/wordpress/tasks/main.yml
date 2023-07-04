@@ -2,8 +2,9 @@
  
     - name: Install gzip 
       yum:
-        name: gzip
+        name: "{{ item }}"
         state: present
+      loop: [ 'gtar', 'tar', 'unzip', 'zipinfo' ]
     
     - name: Download and unpack latest WordPress
       unarchive:
