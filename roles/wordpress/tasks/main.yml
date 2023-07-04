@@ -4,7 +4,7 @@
       yum:
         name: "{{ item }}"
         state: present
-      loop: [ 'gtar', 'tar', 'unzip', 'zipinfo' ]
+      loop: [ 'tar', 'unzip' ]
     
     - name: Download and unpack latest WordPress
       unarchive:
